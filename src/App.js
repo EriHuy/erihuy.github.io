@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar';
+import About from './components/about'
+import Hero from './components/hero'
+import Projects from './components/projects';
+import Footer from './components/footer'
+
+import NeuralBackground from "./components/neural_background";
+import BatCursor from "./components/batCursor";
+import { useState } from 'react';
 
 function App() {
+  const [batCursorEnabled, setBatCursorEnabled] = useState(true);
+
   return (
     <div className="App">
+      {/*<BatCursor />*/}
+      <NeuralBackground />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BatCursor enabled={batCursorEnabled} />
+        <section className="hero_wrapper">
+          <Navbar
+            batCursorEnabled={batCursorEnabled}
+            setBatCursorEnabled={setBatCursorEnabled}
+          />
+          <Hero/>
+        </section>
+        <section id="about">
+          <About/>
+        </section>
+        <section  id="projects">
+          <Projects/>
+        </section>
       </header>
+      <Footer/>
     </div>
   );
 }

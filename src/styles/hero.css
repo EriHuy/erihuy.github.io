@@ -1,0 +1,92 @@
+.hero_container {
+  flex: 1;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 10%;
+}
+
+.hero_content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  transform: translateY(-130px);
+}
+
+.hero_role {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #b5b5b5;
+
+  margin-bottom: 20px;
+}
+
+
+.hero_content h2 {
+  font-size: clamp(48px, 7vw, 90px);
+
+  line-height: 1;
+  margin: 0;
+
+  max-width: 900px;
+}
+
+
+
+.hero_description {
+  margin-top: 30px;
+
+  font-size: 20px;
+  line-height: 1.6;
+
+  color: #c4c4c4;
+}
+
+.hero_wrapper {
+  min-height: 110vh;
+
+  display: flex;
+  flex-direction: column;
+  background: #07080a;
+}
+
+.primary_button,
+.secondary_button {
+  text-decoration: none;
+
+  padding: 14px 24px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.primary_button {
+  background: white;
+  color: black;
+}
+
+.primary_button:hover {
+  background: #ddd;
+}
+
+.secondary_button {
+  color: white;
+
+  border: 1px solid #666;
+}
+
+.secondary_button:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: white;
+}

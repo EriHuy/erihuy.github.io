@@ -1,0 +1,98 @@
+body.custom_cursor,
+body.custom_cursor * {
+  cursor: none !important;
+}
+
+.bat-cursor {
+    position: fixed;
+
+    width: 55px;
+    height: auto;
+
+    left: 0;
+    top: 0;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    transform: translate(-50%, -50%);
+}
+
+.bat-cursor.swing {
+  animation: batSwing 0.22s ease-in-out;
+}
+
+@keyframes batSwing {
+  0% {
+    transform: translate(-15%, -80%) rotate(-20deg);
+  }
+
+  45% {
+    transform: translate(-15%, -80%) rotate(70deg);
+  }
+
+  65% {
+    transform: translate(-15%, -80%) rotate(65deg);
+  }
+
+  100% {
+    transform: translate(-15%, -80%) rotate(-20deg);
+  }
+}
+
+.bat-impact {
+  position: fixed;
+
+  width: 20px;
+  height: 20px;
+
+  pointer-events: none;
+
+  z-index: 99998;
+
+  border: 3px solid white;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation: impact 0.4s ease-out forwards;
+}
+
+@keyframes impact {
+  0% {
+    width: 10px;
+    height: 10px;
+
+    opacity: 1;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+
+    opacity: 0;
+  }
+}
+
+.cursor_toggle {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: 1px solid #555;
+  border-radius: 50%;
+
+  padding: 0;
+}
+
+.cursor_toggle_icon {
+  width: 24px;
+  height: 24px;
+
+  object-fit: contain;
+}
